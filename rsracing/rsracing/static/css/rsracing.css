@@ -1,0 +1,174 @@
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  
+}
+
+.row-fluid .span5 {
+  width: auto;
+  *width: 40.37234042553192%;
+}
+
+form {
+  margin: 0 0 0px;
+}
+
+label {
+  display: block;
+}
+
+input, .select2-container,
+textarea,
+.uneditable-input {
+  width: auto;
+}
+
+.radio
+input[type="radio"] {
+    float: none;
+    margin-bottom: 7px;
+}
+
+.radio.append
+input[type="radio"] {
+    margin-bottom: 15px;
+}
+
+input.btn {
+    height: 30px;
+}
+
+.btn, select {
+    margin-bottom: 10px;
+}
+
+.select2-container {
+    margin-bottom: 10px;
+}
+
+.input-prepend .select2-container {
+    margin-bottom: 0px;
+}
+
+body, input, button, select, textarea, .select2-search input {
+    font-family: Lato,Times,serif;
+}
+
+body, .select2-choice, .input-append .add-on, .input-prepend .add-on,
+.input-append input,
+.input-prepend input,
+.input-append select,
+.input-prepend select,
+.input-append .uneditable-input,
+.input-prepend .uneditable-input,
+.input-append .dropdown-menu,
+.input-prepend .dropdown-menu,
+.input-append .popover,
+.input-prepend .popover,
+.error_msg,
+label, input, button, select, textarea {
+    font-size: 12.5px;
+}
+
+.select2-container:not(.select2-dropdown-open):not(.select2-container-active) .select2-choice {
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.select2-container:not(.select2-dropdown-open) .select2-choice .select2-arrow {
+    border-left: 1px solid rgb(204, 204, 204);
+}
+
+.select2-container .select2-choice {
+    height: 28px;
+}
+
+.select2-chosen {
+    text-align: left;
+}
+
+.input-prepend.select-append .select2-choice {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.input-prepend.select-append .select2-dropdown-open .select2-choice {
+    border-radius: 0px 4px 0px 0px;
+}
+
+.input-prepend.select-append .select2-dropdown-open.select2-drop-above .select2-choice {
+    border-radius: 0px 0px 4px 0px;
+}
+
+.resultado {
+    display: none;
+}
+
+.error_msg {
+    font-weight: bold;
+    color: red;
+}
+
+.add-on.error_msg {
+    position: absolute;
+    width: auto;
+    border: 1px solid transparent;
+    background-color: transparent;
+    min-width: 0px;
+    padding: 4px 0px;
+    font-weight: bold;
+    color: red;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+i sup {
+    font-size: 8px;
+}
+
+.em_desenvolvimento {
+    cursor: pointer; cursor: hand;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: LightRed;
+}
+
+.table-striped tbody > tr:nth-child(even) > td,
+.table-striped tbody > tr:nth-child(even) > th {
+  background-color: Red;
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #f5f5f5;
+}
+
+sub,sup
+{
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+	
+sup 
+{
+	top: -0.5em;
+	right: -0.4em;
+}
+	
+sub 
+{
+	bottom: -0.5em;
+	left: -0.4em;
+}
+
+.overline{
+	text-decoration: overline;
+}

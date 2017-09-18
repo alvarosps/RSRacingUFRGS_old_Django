@@ -1,0 +1,29 @@
+{% extends "rsracing/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<style type="text/css">
+    #patrocinadores{
+    	text-align: center;
+    }
+    table{ 
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<title>Patrocinadores - RS Racing UFRGS</title>
+</head>
+<h1 style='text-align: center'>Patrocinadores da Equipe</h1>
+
+<!-- Tabela de patrocinadores -->
+<div id='patrocinadores'>
+{% csrf_token %}
+	<!-- Import por Jquery -->
+</div>
+
+{% endblock %}

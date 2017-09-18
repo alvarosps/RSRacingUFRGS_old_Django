@@ -1,0 +1,255 @@
+{% load staticfiles %}
+{% load i18n %}
+
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+    	<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    	<link rel="shortcut icon" href='{% static "images/icone.png" %}' type="image/x-icon" />
+        
+        <title>RS Racing UFRGS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8">
+        
+        <link href='{% static "bootstrap/2.3.2/css/bootstrap.css" %}' rel='stylesheet' />
+        <link href='{% static "font-awesome/css/font-awesome.css" %}' rel='stylesheet' />
+        <link href='{% static "select2/select2.css" %}' rel='stylesheet' />
+        <link href='{% static "select2/select2-bootstrap.css" %}' rel='stylesheet' />
+        <link href='{% static "css/rsracing.css" %}' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        
+        <style type="text/css">
+            html {
+                overflow-y: scroll;
+            }
+            
+            body {
+                padding-top: 20px;
+                padding-bottom: 60px;
+                width: 100%;
+            }
+            
+            /* Custom container */
+            .container {
+                margin: 0 auto;
+                width: 1200px;
+            }
+            .container > hr {
+                margin: 10px 0;
+            }
+            
+            /* Main marketing message and sign up button */
+            .jumbotron {
+                margin: 20px 0;
+                text-align: center;
+            }
+            .jumbotron h1 {
+                font-size: 100px;
+                line-height: 1;
+            }
+            .jumbotron .lead {
+                font-size: 24px;
+                line-height: 1.25;
+            }
+            .jumbotron .btn {
+                font-size: 21px;
+                padding: 14px 24px;
+            }
+             
+            /* Supporting marketing content */
+            .marketing {
+                margin: 60px 0;
+            }
+            .marketing p + h4 {
+                margin-top: 28px;
+            }
+            
+            /* Customize the navbar links to be fill the entire space of the .navbar */
+            .navbar .navbar-inner {
+            padding: 0;
+            }
+            .navbar .nav {
+                display: flex;
+                width: 100%;
+            }
+            .navbar .nav li {
+                flex: 1;
+                float: none;
+            }
+            .dropdown-menu li {
+                display: table-cell;
+            }
+            .navbar .nav li a {
+                font-weight: bold;
+                text-align: center;
+                border-left: 1px solid rgba(255,255,255,.75);
+                border-right: 1px solid rgba(0,0,0,.1);
+            }
+            .navbar .nav li:first-child a {
+                border-left: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .navbar .nav li:last-child a {
+                border-right: 0;
+                border-radius: 0 3px 3px 0;
+            }
+            
+            h3 {
+                display: block;
+                width: 95%;
+                padding: 0;
+                margin-bottom: 20px;
+                line-height: 40px;
+                color: #333333;
+                border: 0;
+                border-bottom: 1px solid #e5e5e5;
+                
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .modal .btn {
+                margin-bottom: 0px;
+            }
+            
+            .modal h3 {
+                border-style: none;
+            }
+            
+            #header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            
+            #header_login {
+                text-align: right;
+            }
+            
+            #header .btn {
+                margin-bottom: 0px;
+            }
+            #logo_ufrgs{
+            	padding-left:30px;
+            	text-align:center;
+            }
+            #share-buttons {
+            	text-align: center;
+            }
+            #share-buttons img {
+				width: 35px;
+				padding: 5px;
+				border: 0;
+				box-shadow: 0;
+				display: inline;
+			}
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div id='header'>
+                <a id='header_logo' href='{% url "inicio" %}'>
+                    <img src='{% static "images/logo.png" %}'>
+                </a>
+            </div>
+            
+            <div class="masthead">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div>
+                            <ul class="nav">
+                                <li><a href='{% url "inicio" %}'>Inicio</a></li>
+                                <li><a href='{% url "formulasae" %}'>Sobre a Fórmula SAE</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">A Equipe<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+	                                 	<li><a href='{% url "historia" %}'>História</a></li>
+                                        <li id='time'><a href='{% url "time" %}'>Time atual</a></li>
+                                    </ul>
+                                </li>
+                                <!-- <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Carros<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+	                                 	<li><a class='em_desenvolvimento'>Minuano - 2016</a></li>
+                                        <li><a class='em_desenvolvimento'>Bagual - 2015</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a href='{% url "carros" %}'>Protótipos</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventos e Notícias<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+	                                 	<li><a class='em_desenvolvimento'>Notícias</a></li>
+                                        <li><a class='em_desenvolvimento'>Galeria de fotos</a></li>
+                                        <li><a class='em_desenvolvimento'>Calendário de eventos</a></li>
+                                        <li><a class='em_desenvolvimento'>Newsletter</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Patrocinadores<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+	                                 	<li><a href='{% url "patrocinadores" %}'>Patrocinadores Atuais</a></li>
+                                        <li><a href='{% url "serpatrocinador" %}'>Quero ser patrocinador</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href='{% url "juntandoseaequipe" %}'>Juntando-se a equipe</a></li>
+                                <li><a href='{% url "contato" %}'>Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% block content %}{% endblock content %}
+            
+            <hr></hr>
+            <!-- 
+            <div class="footer">
+                Email para contato: <a href="mailto:(email)">(email)</a>
+                <p>&copy; RS Racing Team</p>
+            </div> -->
+        </div> 
+        
+        <div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src='{% static "js/jquery.mask.js" %}'></script>
+        <script src='{% static "js/jquery.maskedinput.js" %}'></script>
+        <script src='{% static "bootstrap/2.3.2/js/bootstrap.js" %}'></script>
+        <script src='{% static "js/bootbox-3.3.0.js" %}'></script>
+        <script src='{% static "select2/select2.js" %}'></script>
+        <script src='{% static "select2/select2_locale_pt-BR.js" %}'></script>
+        <script src='{% static "serialize-object/jquery.serialize-object.js" %}'></script>
+        
+        <script src='{% url "js_dialog" %}'></script>
+        <script src='{% url "js" %}'></script>
+        
+        
+        </div>
+    </body>
+    <div id="share-buttons">
+    
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/RSRacingTeam/" target="_blank">
+        <img src='{% static "images/icones/facebook.png" %}' alt="Facebook" />
+    </a>
+    
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/channel/UCeW--7uUxS2YpRSU7Op_GnQ" target="_blank">
+        <img src='{% static "images/icones/youtube.png" %}' alt="YouTube" />
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/rsracingufrgs/" target="_blank">
+        <img src='{% static "images/icones/instagram.png" %}' alt="Instagram" />
+    </a>
+
+</div>
+</html>

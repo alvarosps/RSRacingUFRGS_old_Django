@@ -1,0 +1,119 @@
+{% extends "rsracing/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<style type="text/css">
+    #textos_historia{
+    	text-align: center;
+    }
+    #img_10_11 #img_12 #img_13{
+    	height: 260;
+    	width: 450;
+    }
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<title>História - RS Racing UFRGS</title>
+</head>
+
+<div id='historia'>
+	<h2 style='text-align: center;'>História da RS Racing UFRGS</h2>
+	<div id='index_historia'>
+		<ul>
+			<li><a href='#20102011'>2010 e 2011</a></li>
+			<li><a href='#2012'>2012</a></li>
+			<li><a href='#2013'>2013</a></li>
+			<li><a href='#2014'>2014</a></li>
+		</ul>
+	</div>
+	<hr>
+	<div id='textos_historia'>
+		<div id='resumo'>
+			<p><h5>
+				A RS Racing UFRGS é a equipe oficial de Fórmula SAE da Universidade Federal do Rio Grande do Sul –
+				UFRGS, tendo sua sede localizada no Campus do Vale, juntamente à sede da equipe Baja SAE, onde ambos
+				dividem a mesma oficina para realizar o desenvolvimento e a fabricação dos protótipos. Fundada por um pequeno
+				grupo de estudantes de engenharia, em meados de 2010, seus integrantes compartilhavam a mesma ambição:
+				materializar o sonho de trabalhar com uma equipe de competição de carros de corrida visando a aproximação da
+				indústria automotiva. Somando o intuito de aplicar na prática os conhecimentos teóricos advindos dos cursos da
+				universidade, os alunos focaram-se, desde então, em projetar e construir um veículo de alto desempenho para
+				participar da competição brasileira de Fórmula SAE.
+			</h5></p>
+		</div>
+		<hr>
+		<div id='20102011'>
+			<h3>2010 e 2011</h3>
+			<p>
+				Entre 2010 e 2011, a equipe enfrentou diversos desafios para estruturar-se, principalmente por se tratar do
+				primeiro ano de trabalho no projeto. Primeiramente, decidiu-se que seriam construídos dois carros partindo
+				inteiramente “do zero”, sendo o primeiro para aprendizado e o segundo, já totalmente enquadrado às normas, para a
+				competição. Muito tempo deste primeiro ano foi dedicado à concepção e entendimento referente ao desenho destes
+				carros, tendo que projetá-los dentro do regulamento estipulado em padrão internacional, para fazer com que a RS
+				Racing UFRGS participasse de sua primeira competição. Além do mais, houve muita dificuldade com a obtenção de
+				recursos financeiros para serem empregados na aquisição de ferramentas e também na aquisição de
+				materiais/matéria prima. A busca de apoio dentro da universidade, busca de patrocinadores interessados no projeto, 
+				6
+				divulgação do projeto dentro dos cursos de Engenharia - entre tantos outros empecilhos - também contribuíram para
+				que o tempo deixado para o foco em projetar e construir o carro fosse reduzido. Mesmo assim, com muito empenho,
+				os alunos conseguiram conciliar o tempo e os contratempos para o desenvolvimento das diversas áreas que
+				compõem o carro, como suspensão, motor, freios, chassi e marketing. Assim, na competição de 2011, a RS Racing
+				UFRGS alcançou a 17ª colocação dentre as 25 equipes participantes. 
+			</p>
+			<img id='img_10_11' src='{% static "images/equipe/RSRacing_UFRGS_no_FSAE_Brasil_2011.jpg" %}' alt='Equipe na Competição 2011'></img>
+		</div>
+		<hr>
+		<div id='2012'>
+			<h3>2012</h3>
+			<p>
+				Em 2012, a equipe resolveu inovar em um conceito jamais visto na história da competição nacional de
+				Formula SAE. Em busca de uma concepção diferente da disposição dos componentes no veículo, a RS Racing
+				UFRGS desenvolveu um projeto de carro com motor lateral. Para isso, foi construído outro carro, o RS02,
+				novamente de um ponto inicial. O intuito de aplicar essa inovação foi de obter ganhos, tanto na parte dinâmica do
+				carro, como na redução de tamanho e peso do veículo. Este projeto recebeu grande destaque da comissão julgadora,
+				não apenas pela surpresa dos mesmos ao verem o carro, mas também por ter sido considerado inovador no Brasil.
+				Apesar de o projeto conceitual ser um dos melhores da competição, falhas no processo de fabricação do carro 
+				7
+				fizeram com que resultado fosse diferente do esperado. Nesta 9ª competição, em 2012, a equipe alcançou a 11ª
+				colocação dentre as 27 equipes participantes, sendo a melhor colocação da equipe em toda sua história. 
+			</p>
+			<img id='img_12' src='{% static "images/equipe/RSRacing_UFRGS_no_FSAE_Brasil_2012.jpg" %}' alt='Equipe na Competição 2012'></img>		
+		</div>
+		<hr>
+		<div id='2013'>
+			<h3>2013</h3>
+			<p>
+				No ano de 2013, devido aos bons resultados obtidos com o motor lateral, a equipe resolveu dar
+				continuidade ao projeto, buscando apenas aperfeiçoar os demais componentes do carro. Muito foi trabalhado para
+				que o carro fosse novamente posto nos padrões da competição e fizesse com que a UFRGS tivesse mais uma vez
+				uma equipe representando-a. Buscou-se desenvolver a parte dos freios, que havia sido prejudicial nos testes de
+				frenagem em 2012; o motor foi otimizado, aprimorando sua calibração através de uma injeção eletrônica
+				programável; o chassi foi redesenhado para que seu peso e tamanho fossem reduzidos. No entanto, a saída de alguns
+				participantes para intercâmbio internacional, tanto no início como no meio do ano, alinhado à falta de recursos
+				financeiros, por exemplo, acarretaram em atrasos no cronograma, o que impediu que o protótipo fosse
+				suficientemente testado, resultando em falhas operacionais no decorrer da competição. Dessa forma, a equipe decaiu
+				para a 19ª colocação dentre as 31 equipes participantes da 10ª edição do campeonato. Mesmo obtendo uma
+				colocação inferior em 2013, esse resultado foi importante para que a equipe amadurecesse e tomasse decisões sobre
+				o seu futuro. Decidiu-se que em 2014 a equipe teria que passar por um processo de reestruturação, visando o foco na
+				sua organização e planejamento, assim como na obtenção de recursos para que o carro fosse mais competitivo,
+				sendo previamente testado antes de ir à competição.
+			</p>
+			<img id='img_13' src='{% static "images/equipe/equipe_competicao2013.png" %}' alt='Equipe na Competição 2013'></img>
+		</div>
+		<hr>
+		<div id='2014'>
+			<h3>2014</h3>
+			<p>
+				No ano de 2014, decidiu-se reestruturar a equipe. Trocou-se o capitão, antigos integrantes voltaram ao time
+				após retorno ao Brasil e novos integrantes juntaram-se ao projeto, entre eles alunos da graduação e pós-graduação da
+				universidade. Além disso, buscou-se mais apoio dentro do departamento de Engenharia Mecânica da UFRGS, por
+				meio de seu corpo docente, fortalecendo assim a RS Racing UFRGS. Essa busca teve o intuito de obter melhores
+				resultados nas futuras competições e fazer com que o projeto evolua cada vez mais dentro da Escola de Engenharia. 
+			</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

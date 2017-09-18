@@ -1,0 +1,75 @@
+{% extends "rsracingufrgs/base.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+
+<head>
+	<meta charset="UTF-8">
+	<title>Time - RS Racing UFRGS</title>
+</head>
+
+<style type='text/css'>
+	#membros{
+		text-align: center;
+		display: block;
+	}
+	th, td {
+    	padding-right: 25px;
+	}
+	table{ 
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.img_membros{
+		width: 100px;
+		height: 100px;
+	}
+	.imgWrap {
+	  position: relative;
+	  height: 110px;
+	  width: 200px;
+	}
+	.imgDescription {
+	  position: center;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  background: rgba(255, 0, 0, 0.72);
+	  color: #fff;
+	  visibility: hidden;
+	  opacity: 0;
+	  /*remove comment if you want a gradual transition between states
+	      -webkit-transition: visibility opacity 0.2s;
+	      */
+	}
+	.imgWrap:hover .imgDescription {
+	  visibility: visible;
+	  opacity: 1;
+	}
+	#tabela_equipes{
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+	.membro_individual{
+	    display: flex;
+	    flex-direction: column;
+	    align-items: flex-start;
+	    justify-content: center;
+	}
+	.nome_equipe .nome_membro .lider{
+	    text-align: center;
+	}
+</style>
+
+<!-- Tabela de membros -->
+<div id='membros'>
+{% csrf_token %}
+	<!-- Import por Jquery -->
+</div>
+
+{% endblock %}

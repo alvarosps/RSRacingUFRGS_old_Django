@@ -1,0 +1,168 @@
+{% extends "rsracing/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+
+<style type="text/css">
+    .text {
+        margin-bottom: 10px;
+    }
+    
+    .thumbnail:hover img {
+    
+	}
+    
+    #info_rsracing .text {
+        text-align: justify;
+    }
+    
+    #div_informacoes {
+        display: flex;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+        #info_rsracing{
+            display: flex;
+            flex: 2;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #info_1 {
+            flex: 1.5;
+        }
+        
+        #info_titulos {
+            display: flex;
+            flex: 2;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+    
+    #logo {
+    	align-items: center;
+    	display: flex;
+        text-align: center;
+    	padding: 10px;
+    	padding-left: 300px;
+    }
+    * { margin:0; padding:0;}
+	#slide { 
+		width: 585px; 
+		overflow: hidden; 
+		height: 329px;
+		margin: 50px auto;
+		box-shadow: 0 0 8px #000;
+		position: relative;
+		}
+	#slide img {
+		position: absolute;
+		z-index: 1;
+		display: none;
+		left: 0;
+		}
+	#slide p {
+		z-index:2;
+		position: absolute; 
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px; 
+		font-family: Arial; 
+		font-size: 14px; 
+		background: rgba(0,0,0,0.5);  
+		color: #fff;
+		}
+</style>
+<head>
+	<meta charset="utf-8">
+	<title>Início - RS Racing UFRGS</title>
+</head>
+<!-- 
+<div id='logo'>
+	<img id='img_logo' src='{% static "images/logo_grande.png" %}'>
+</div>
+ -->
+	<figure id="slide">
+		<img src='{% static "images/slideshow/RSR#4_2015_O_Bagual_(1).jpg" %}' alt="RSR#4 O Bagual" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSR#2_2013.jpg" %}' alt="RSR#2 2013" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSR#4_2015_O_Bagual_(2).jpg" %}' alt="RSR#4 O Bagual" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSR#5_2016_Minuano_(1).jpg" %}' alt="RSR#5 O Minuano" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSR#5_2016_Minuano_(2).jpg" %}' alt="RSR#5 O Minuano" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSR#5_2016_Minuano_(3).jpg" %}' alt="RSR#5 O Minuano" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSR#5_2016_Minuano_(4).jpg" %}' alt="RSR#5 O Minuano" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSR#5_2016_Minuano_(5).jpg" %}' alt="RSR#5 O Minuano" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSRacing_UFRGS_no_FSAE_Brasil_2011.jpg" %}' alt="RSRacing UFRGS no FSAE Brasil 2011" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSRacing_UFRGS_no_FSAE_Brasil_2012.jpg" %}' alt="RSRacing UFRGS no FSAE Brasil 2012" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSRacing_UFRGS_no_FSAE_Brasil_2015.jpg" %}' alt="RSRacing UFRGS no FSAE Brasil 2015" style="width:585px;height:329px;">
+		<img src='{% static "images/slideshow/RSRacing_UFRGS_no_FSAE_Brasil_2016.jpg" %}' alt="RSRacing UFRGS no FSAE Brasil 2016" style="width:585px;height:329px;">
+	</figure>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#slide img:eq(0)").addClass("ativo").show();
+			var texto = $(".ativo").attr("alt");
+			$("#slide").prepend("<p>"+texto+"</p>");
+		})
+		
+		setInterval(slide,3000);
+		function slide(){
+			if($(".ativo").next().size()){
+				$(".ativo").fadeOut().removeClass("ativo").next().fadeIn().addClass("ativo");
+			}else {
+				$(".ativo").fadeOut().removeClass("ativo");
+				$("#slide img:eq(0)").fadeIn().addClass("ativo");
+			}
+			var texto = $(".ativo").attr("alt");
+			$("#slide p").hide().html(texto).delay(500).fadeIn();
+		}
+		
+	</script>
+<hr></hr>
+
+    <div id='div_informacoes'>
+        <div id="info_rsracing">
+            <h3>RS Racing UFRGS</h3>
+            <div class='text'>
+            	<p>
+            		A RS Racing UFRGS é a equipe oficial de Fórmula SAE da Universidade Federal do Rio Grande do Sul –
+					UFRGS, tendo sua sede localizada no Campus do Vale, juntamente à sede da equipe Baja SAE, onde ambos
+					dividem a mesma oficina para realizar o desenvolvimento e a fabricação dos protótipos. Fundada por um pequeno
+					grupo de estudantes de engenharia, em meados de 2010, seus integrantes compartilhavam a mesma ambição:
+					materializar o sonho de trabalhar com uma equipe de competição de carros de corrida visando a aproximação da
+					indústria automotiva. Somando o intuito de aplicar na prática os conhecimentos teóricos advindos dos cursos da
+					universidade, os alunos focaram-se, desde então, em projetar e construir um veículo de alto desempenho para
+					participar da competição brasileira de Fórmula SAE.
+            	</p>
+            </div>
+            <a class="btn btn-danger" href='{% url "historia" %}'>Mais detalhes</a>
+        </div>
+        
+        <div id="info_1">
+            <h3>Patrocinadores</h3>
+ 
+            <div>
+                <a class="btn btn-danger" href='{% url "patrocinadores" %}'>Conheça nossos patrocinadores!</a>
+                <a class="btn btn-danger" href='{% url "serpatrocinador" %}'>Quer ser nosso patrocinador? Saiba mais!</a>
+            </div>
+        </div>
+        
+       <div id="info_titulos">
+            <h3>Titulos da equipe</h3>
+            <div class='text'>
+                <ul>
+                	<li>2º Lugar Geral - Fórmula SAE Brasil 2015</li>
+        
+                </ul>
+            </div>
+            <a class="btn btn-danger" href='{% url "carros" %}'>Mais Detalhes(Por Protótipo)</a>
+        </div>
+    </div>
+
+
+{% endblock %}

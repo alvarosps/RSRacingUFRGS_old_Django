@@ -1,0 +1,69 @@
+{% extends "rsracing/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<style type="text/css">
+    #sobre_formula_sae {
+    	align-items: center;
+    	display: flex;
+    	text-align: center;
+    }
+    #sobre_formula_sae2 {
+    	align-items: center;
+    	display: flex;
+    	text-align: center;
+    }
+    #img_sobre_formula_sae {
+    	align-items: center;
+    	display: flex;
+    	padding-left: 450px;
+    }
+    #img_provas {
+    	align-items: center;
+    	display: flex;
+    	padding-left: 160px;
+    }
+    #prova_estatica {
+    	padding-right: 50px;
+    }
+</style>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Fórmula SAE - RS Racing UFRGS</title>
+</head>
+
+<div id="img_sobre_formula_sae">
+	<img id='img_sae' src='{% static "images/saelogo.png" %}'>
+</div>
+<div id="sobre_formula_sae">
+	<h4>A Formula SAE é uma competição estudantil organizada pela Society of Automotive Engineers - SAE. 
+		A competição nasceu em 1978 e foi inicialmente denominada SAE Mini Indy. 
+		Atualmente há, aproximadamente, mais de 585 equipes participantes ao redor de todo mundo. 
+		A etapa brasileira é feita no fim do ano em Piracicaba - SP, na qual o primeiro e o segundo colocado na categoria
+		combustão interna ganham respectivamente uma inscrição nas competições de Michigan e Lincoln, nos EUA, 
+		e o primeiro lugar na categoria elétrico para Lincoln.
+	</h4>
+</div>
+<div id="sobre_formula_sae2">	
+	<h4>
+		O conceito por trás da Fórmula SAE é uma companhia industrial fictícia que contratou um time estudantil
+		para desenvolver um pequeno carro de Fórmula 1. 
+		A competição, com duração de três a quatro dias, é separada em provas estáticas e dinâmicas.
+	</h4>
+</div>
+<p style='text-align: center'>Para informações sobre as provas, clique nas figuras abaixo.</p>
+<div id="img_provas">
+	<div id="prova_estatica">
+		<img id='img_prova_estatica' src='{% static "images/provas_estaticas.png" %}'>
+	</div>
+	<div id="prova_dinamica">	
+		<img id='img_prova_dinamica' src='{% static "images/provas_dinamicas.png" %}'>
+	</div>
+</div>
+</div>
+
+    
+{% endblock %}

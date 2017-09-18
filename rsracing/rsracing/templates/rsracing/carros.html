@@ -1,0 +1,61 @@
+{% extends "rsracing/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<style type="text/css">
+    .carros {
+    	text-align: center;
+    }
+    table{
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+    #img_rs01, #img_rs02, #img_rs03, #img_bagual, #img_minuano{
+    	height: 280px;
+    	width: 500px;
+    }
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<title>Protótipos - RS Racing UFRGS</title>
+</head>
+<h1 style='text-align: center'>Protótipos da Equipe</h1>
+<div class="carros">
+	<table>
+		<tr><td>
+			<div id="rs01">
+				<h2>Protótipo 2011 - RS#01</h2>
+				<img id='img_rs01' src='{% static "images/prototipos/rs01_2.png" %}' alt='RS#01'>
+			</div>
+		</td></tr>
+		<tr><td>
+			<div id="rs02">
+				<h2>Protótipo 2012 - RS#02</h2>
+				<img id='img_rs02' src='{% static "images/prototipos/rs02_1.png" %}' alt='RS#02'>
+			</div>
+		</td></tr>
+		<tr><td>
+			<div id="rs03">
+				<h2>Protótipo 2013 - RS#03</h2>
+				<img id='img_rs03' src='{% static "images/prototipos/rs03_1.png" %}' alt='RS#03'>
+			</div>
+		</td></tr>
+		<tr><td>
+			<div id="bagual">
+				<h2>Protótipo 2015 - Bagual</h2>
+				<img id='img_bagual' src='{% static "images/prototipos/bagual_1.png" %}' alt='Bagual'>
+			</div>
+		</td></tr>
+		<tr><td>
+			<div id="minuano">
+				<h2>Protótipo 2016 - Minuano</h2>
+				<img id='img_minuano' src='{% static "images/prototipos/minuano_1.png" %}' alt='Minuano'>
+			</div>
+		</td></tr>
+	</table>
+</div>
+
+{% endblock %}
